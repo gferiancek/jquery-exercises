@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <title>Movie Ratings</title>
+  </head>
+  <body>
+    <header class="movie-header">
+      <h1 class="movie-header__title">Movie Ratings</h1>
+      <form class="movie-form">
+        <div class="movie-form__section">
+          <label for="input-title" class="movie-form__label">Title</label>
+          <input type="text" id="input-title" placeholder="Enter movie title" />
+        </div>
+        <div class="movie-form__section">
+          <label for="input-rating" class="movie-form__label">Rating</label>
+          <input type="range" id="input-rating" max="10" list="rating-values" value="5" />
+          <datalist id="rating-values">
+            <option value="0" label="0"></option>
+            <option value="2"></option>
+            <option value="4"></option>
+            <option value="6"></option>
+            <option value="8"></option>
+            <option value="10" label="10"></option>
+          </datalist>
+        </div>
+      </form>
+    </header>
+    <table class="movie-table">
+      <thead class="movie-table__header">
+        <tr>
+          <th>Title</th>
+          <th>Rating</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody class="movie-table__body"></tbody>
+    </table>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
