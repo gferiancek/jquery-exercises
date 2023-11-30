@@ -1,0 +1,106 @@
+body {
+  background-color: darkgrey;
+}
+
+/***************
+* Movie Header *
+****************/
+.movie-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkslategrey;
+  box-shadow: 0 2px 5px black;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+
+  & .movie-header__title {
+    font-size: 2rem;
+    color: orange;
+  }
+
+  & .movie-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .movie-form__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem;
+      width: 100%;
+  
+      & label {
+        width: 95%;
+        color: orange;
+        text-align: start;
+      }
+
+      & #title-input {
+        border-radius: 10px;
+        padding: 0.5rem;
+        border: none;
+        outline: none;
+      }
+  
+      & input,
+      & datalist {
+        width: 100%;
+      }
+      
+      & #rating-input {
+        accent-color: orange;
+        color: orange;
+      }
+
+      & datalist {
+        padding-top: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        color: orange;
+      }
+    }
+  }
+}
+
+/**************
+* Movie Table *
+***************/
+.movie-table {
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+
+  & caption {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  & td {
+    padding: 0 0.5rem;
+  }
+
+  & td button {
+    margin: 0.5rem;
+  }
+}
+ 
+/*****************
+* Material Icons *
+******************/
+.material-symbols-sharp {
+  font-size: 1rem;
+}
+
+.filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+@media only screen and (min-device-width: 800px) {
+  td,
+  th,
+  .material-symbols-sharp {
+    font-size: 1.5rem;
+  }
+}
