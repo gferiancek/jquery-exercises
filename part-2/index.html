@@ -3,20 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Material Icons for a Star/Half-Star -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
     <link rel="stylesheet" href="app.css" />
     <title>Movie Ratings</title>
   </head>
   <body>
+    <!-- Header -->
     <header class="movie-header">
       <h1 class="movie-header__title">Movie Ratings</h1>
       <form class="movie-form">
         <div class="movie-form__section">
-          <label for="input-title" class="movie-form__label">Title</label>
-          <input type="text" id="input-title" placeholder="Enter movie title" />
+          <label for="title-input" class="movie-form__label">Title</label>
+          <input type="text" id="title-input" placeholder="Enter movie title" />
         </div>
         <div class="movie-form__section">
-          <label for="input-rating" class="movie-form__label">Rating</label>
-          <input type="range" id="input-rating" max="10" list="rating-values" value="5" />
+          <label for="rating-input" class="movie-form__label">Rating</label>
+          <input type="range" id="rating-input" max="10" list="rating-values" value="5" />
           <datalist id="rating-values">
             <option value="0" label="0"></option>
             <option value="2"></option>
@@ -26,9 +37,13 @@
             <option value="10" label="10"></option>
           </datalist>
         </div>
+        <button class="movie-form__add-button">Add Movie</button>
       </form>
     </header>
+
+    <!-- Movie Table -->
     <table class="movie-table">
+      <caption>My Favorite Movies</caption>
       <thead class="movie-table__header">
         <tr>
           <th>Title</th>
